@@ -69,7 +69,7 @@ layout=[
 
 window = sg.Window('FolyoGör Test',layout,grab_anywhere = False,finalize=True)
 window.maximize()
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(1,cv2.CAP_DSHOW)
 #cap.set(cv2.CAP_PROP_FRAME_WIDTH, 3840) # 4k/high_res
 #cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 2160) # 4k/high_res
 
