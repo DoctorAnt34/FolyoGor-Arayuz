@@ -1,0 +1,74 @@
+
+    Output State = o-f1        
+    [Image Filter 1]
+    [Smoothing]
+    2D Convolution = 0.0
+    Image Blurring = 0.0
+    Gaussian Blurring = 0.0
+    Median Blurring = 0.0
+    Bilateral Filtering = 0.0
+    [Tresholding]
+    Binary = 0.0
+    Binary INV = 0.0
+    Trunc = 0.0
+    TOZERO = 0.0
+    TOZERO INV = 0.0
+    [Morphological Transformation]
+    Erosion = 0.0
+    Erosion Iteration = 1.0
+    Dilation = 0.0
+    Dlation Iteration = 1.0
+    Opening = 0.0
+    Closing = 0.0
+    Morphological Gradient = 0.0
+    Top Hat = 0.0
+    Black Hat = 0.0
+
+    [Image Filter 2]
+    [Smoothing]
+    2D Convolution = 0.0
+    Image Blurring = 0.0
+    Gaussian Blurring = 0.0
+    Median Blurring = 0.0
+    Bilateral Filtering = 0.0
+    [Tresholding]
+    Binary = 0.0
+    Binary INV = 0.0
+    Trunc = 0.0
+    TOZERO = 0.0
+    TOZERO INV = 0.0
+    [Morphological Transformation]
+    Erosion = 0.0
+    Erosion Iteration = 1.0
+    Dilation = 0.0
+    Dlation Iteration = 1.0
+    Opening = 0.0
+    Closing = 0.0
+    Morphological Gradient = 0.0
+    Top Hat = 0.0
+    Black Hat = 0.0
+
+    [Image Filter Final]
+    [Smoothing]
+    2D Convolution = 0.0
+    Image Blurring = 0.0
+    Gaussian Blurring = 0.0
+    Median Blurring = 0.0
+    Bilateral Filtering = 0.0
+    [Tresholding]
+    Binary = 0.0
+    Binary INV = 0.0
+    Trunc = 0.0
+    TOZERO = 0.0
+    TOZERO INV = 0.0
+    [Morphological Transformation]
+    Erosion = 0.0
+    Erosion Iteration = 1.0
+    Dilation = 0.0
+    Dlation Iteration = 1.0
+    Opening = 0.0
+    Closing = 0.0
+    Morphological Gradient = 0.0
+    Top Hat = 0.0
+    Black Hat = 0.0
+    
