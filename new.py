@@ -48,17 +48,20 @@ img1_iter_col = sg.Frame('Iter Test',[
     [sg.Text('Dilation Iteration'),sg.Slider(range=(1,10),orientation='h',key='img1_dilation_iteration',enable_events=True)],
 ])
 img1_smoot_col = sg.Frame('Smoothing',[
-    [sg.Text('2D Convolution'),sg.Slider(range=(0,50),orientation='h',key='img1_2d',enable_events=True)],
-    [sg.Text('Image Blurring'),sg.Slider(range=(0,50),orientation='h',key='img1_blur',enable_events=True)],
-    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,50),orientation='h',key='img1_gaussian',enable_events=True)],
-    [sg.Text('Median Blurring'),sg.Slider(range=(0,50),orientation='h',key='img1_median',enable_events=True)],
-    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,50),orientation='h',key='img1_bilateral',enable_events=True)],
+    [sg.Text('2D Convolution'),sg.Slider(range=(0,255),orientation='h',key='img1_2d',enable_events=True)],
+    [sg.Text('Image Blurring'),sg.Slider(range=(0,255),orientation='h',key='img1_blur',enable_events=True)],
+    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,255),orientation='h',key='img1_gaussian',enable_events=True)],
+    [sg.Text('Median Blurring'),sg.Slider(range=(0,255),orientation='h',key='img1_median',enable_events=True)],
+    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,255),orientation='h',key='img1_bilateral',enable_events=True)],
 ])
 img1_adap_thres_col=sg.Frame('Adaptive Thresholding',[
     [sg.Text('Mean'),sg.Radio('ON','MEAN',key='img1_mean_on_off',enable_events=True),sg.Radio('OFF','MEAN'),sg.Text('Block Size'),sg.Slider(range=(0,20),orientation='h',key='img1_mean_block_size',enable_events=True),sg.Text('Constant'),sg.Slider(range=(0,20),orientation='h',key='img1_mean_constant',enable_events=True)],
     [],
     [],
-    [sg.Text('Gaussian'),sg.Radio('ON','GAUSS',key='img1_gaussian',visible=False)]
+    [sg.Text('Canny Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img1_canny1',enable_events=True),sg.Slider(range=(0,255),orientation='h',key='img1_canny2',enable_events=True)],
+    [sg.Text('Sobel Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img1_sobel',enable_events=True)],
+    [sg.Text('dx :'),sg.Radio('ON','img1_dx',key='img1_sobel_dx',enable_events=True),sg.Radio('OFF','img1_dx')],
+    [sg.Text('dy :'),sg.Radio('ON','img1_dy',key='img1_sobel_dy',enable_events=True),sg.Radio('OFF','img_1dy')]
 ])
 img1_thres_col = sg.Frame('Tresholding',[
     [sg.Text('Binary'),sg.Slider(range=(0,255),orientation='h',key='img1_binary',enable_events=True,)],
@@ -69,13 +72,13 @@ img1_thres_col = sg.Frame('Tresholding',[
 ])
 
 img1_morph_col = sg.Frame('Morphological Transformation',[
-    [sg.Text('Erosion'),sg.Slider(range=(0,50),orientation='h',key='img1_erosion',enable_events=True)],
-    [sg.Text('Dilation'),sg.Slider(range=(0,50),orientation='h',key='img1_dilation',enable_events=True)],
-    [sg.Text('Opening'),sg.Slider(range=(0,50),orientation='h',key='img1_opening',enable_events=True)],
-    [sg.Text('Closing'),sg.Slider(range=(0,50),orientation='h',key='img1_closing',enable_events=True)],
-    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,50),orientation='h',key='img1_gradiant',enable_events=True)],
-    [sg.Text('Top Hat'),sg.Slider(range=(0,50),orientation='h',key='img1_tophat',enable_events=True)],
-    [sg.Text('Black Hat'),sg.Slider(range=(0,50),orientation='h',key='img1_blackhat',enable_events=True)],
+    [sg.Text('Erosion'),sg.Slider(range=(0,255),orientation='h',key='img1_erosion',enable_events=True)],
+    [sg.Text('Dilation'),sg.Slider(range=(0,255),orientation='h',key='img1_dilation',enable_events=True)],
+    [sg.Text('Opening'),sg.Slider(range=(0,255),orientation='h',key='img1_opening',enable_events=True)],
+    [sg.Text('Closing'),sg.Slider(range=(0,255),orientation='h',key='img1_closing',enable_events=True)],
+    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,255),orientation='h',key='img1_gradiant',enable_events=True)],
+    [sg.Text('Top Hat'),sg.Slider(range=(0,255),orientation='h',key='img1_tophat',enable_events=True)],
+    [sg.Text('Black Hat'),sg.Slider(range=(0,255),orientation='h',key='img1_blackhat',enable_events=True)],
 ])
 
 
@@ -90,17 +93,20 @@ img2_iter_col = sg.Frame('Iter Test',[
     [sg.Text('Dilation Iteration'),sg.Slider(range=(1,10),orientation='h',key='img2_dilation_iteration',enable_events=True)],
 ])
 img2_smoot_col = sg.Frame('Smoothing',[
-    [sg.Text('2D Convolution'),sg.Slider(range=(0,50),orientation='h',key='img2_2d',enable_events=True)],
-    [sg.Text('Image Blurring'),sg.Slider(range=(0,50),orientation='h',key='img2_blur',enable_events=True)],
-    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,50),orientation='h',key='img2_gaussian',enable_events=True)],
-    [sg.Text('Median Blurring'),sg.Slider(range=(0,50),orientation='h',key='img2_median',enable_events=True)],
-    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,50),orientation='h',key='img2_bilateral',enable_events=True)],
+    [sg.Text('2D Convolution'),sg.Slider(range=(0,255),orientation='h',key='img2_2d',enable_events=True)],
+    [sg.Text('Image Blurring'),sg.Slider(range=(0,255),orientation='h',key='img2_blur',enable_events=True)],
+    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,255),orientation='h',key='img2_gaussian',enable_events=True)],
+    [sg.Text('Median Blurring'),sg.Slider(range=(0,255),orientation='h',key='img2_median',enable_events=True)],
+    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,255),orientation='h',key='img2_bilateral',enable_events=True)],
 ])
 img2_adap_thres_col=sg.Frame('Adaptive Thresholding',[
     [sg.Text('Mean'),sg.Radio('ON','MEAN',key='img2_mean_on_off',enable_events=True),sg.Radio('OFF','MEAN'),sg.Text('Block Size'),sg.Slider(range=(0,20),orientation='h',key='img2_mean_block_size',enable_events=True),sg.Text('Constant'),sg.Slider(range=(0,20),orientation='h',key='img2_mean_constant',enable_events=True)],
     [],
     [],
-    [sg.Text('Gaussian'),sg.Radio('ON','GAUSS',key='img2_gaussian',visible=False)]
+    [sg.Text('Canny Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img2_canny1',enable_events=True),sg.Slider(range=(0,255),orientation='h',key='img2_canny2',enable_events=True)],
+    [sg.Text('Sobel Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img2_sobel',enable_events=True)],
+    [sg.Text('dx :'),sg.Radio('ON','img2_dx',key='img2_sobel_dx',enable_events=True),sg.Radio('OFF','img2_dx')],
+    [sg.Text('dy :'),sg.Radio('ON','img2_dy',key='img2_sobel_dy',enable_events=True),sg.Radio('OFF','img2_dy')]
 ])
 img2_thres_col = sg.Frame('Tresholding',[
     [sg.Text('Binary'),sg.Slider(range=(0,255),orientation='h',key='img2_binary',enable_events=True,)],
@@ -111,13 +117,13 @@ img2_thres_col = sg.Frame('Tresholding',[
 ])
 
 img2_morph_col = sg.Frame('Morphological Transformation',[
-    [sg.Text('Erosion'),sg.Slider(range=(0,50),orientation='h',key='img2_erosion',enable_events=True)],
-    [sg.Text('Dilation'),sg.Slider(range=(0,50),orientation='h',key='img2_dilation',enable_events=True)],
-    [sg.Text('Opening'),sg.Slider(range=(0,50),orientation='h',key='img2_opening',enable_events=True)],
-    [sg.Text('Closing'),sg.Slider(range=(0,50),orientation='h',key='img2_closing',enable_events=True)],
-    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,50),orientation='h',key='img2_gradiant',enable_events=True)],
-    [sg.Text('Top Hat'),sg.Slider(range=(0,50),orientation='h',key='img2_tophat',enable_events=True)],
-    [sg.Text('Black Hat'),sg.Slider(range=(0,50),orientation='h',key='img2_blackhat',enable_events=True)],
+    [sg.Text('Erosion'),sg.Slider(range=(0,255),orientation='h',key='img2_erosion',enable_events=True)],
+    [sg.Text('Dilation'),sg.Slider(range=(0,255),orientation='h',key='img2_dilation',enable_events=True)],
+    [sg.Text('Opening'),sg.Slider(range=(0,255),orientation='h',key='img2_opening',enable_events=True)],
+    [sg.Text('Closing'),sg.Slider(range=(0,255),orientation='h',key='img2_closing',enable_events=True)],
+    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,255),orientation='h',key='img2_gradiant',enable_events=True)],
+    [sg.Text('Top Hat'),sg.Slider(range=(0,255),orientation='h',key='img2_tophat',enable_events=True)],
+    [sg.Text('Black Hat'),sg.Slider(range=(0,255),orientation='h',key='img2_blackhat',enable_events=True)],
 ])
 
 
@@ -133,17 +139,20 @@ img_final_iter_col = sg.Frame('Iter Test',[
     [sg.Text('Dilation Iteration'),sg.Slider(range=(1,10),orientation='h',key='img_final_dilation_iteration',enable_events=True)],
 ])
 img_final_smoot_col = sg.Frame('Smoothing',[
-    [sg.Text('2D Convolution'),sg.Slider(range=(0,50),orientation='h',key='img_final_2d',enable_events=True)],
-    [sg.Text('Image Blurring'),sg.Slider(range=(0,50),orientation='h',key='img_final_blur',enable_events=True)],
-    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,50),orientation='h',key='img_final_gaussian',enable_events=True)],
-    [sg.Text('Median Blurring'),sg.Slider(range=(0,50),orientation='h',key='img_final_median',enable_events=True)],
-    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,50),orientation='h',key='img_final_bilateral',enable_events=True)],
+    [sg.Text('2D Convolution'),sg.Slider(range=(0,255),orientation='h',key='img_final_2d',enable_events=True)],
+    [sg.Text('Image Blurring'),sg.Slider(range=(0,255),orientation='h',key='img_final_blur',enable_events=True)],
+    [sg.Text('Gaussian Blurring'),sg.Slider(range=(0,255),orientation='h',key='img_final_gaussian',enable_events=True)],
+    [sg.Text('Median Blurring'),sg.Slider(range=(0,255),orientation='h',key='img_final_median',enable_events=True)],
+    [sg.Text('Bilateral Filtering'),sg.Slider(range=(0,255),orientation='h',key='img_final_bilateral',enable_events=True)],
 ])
 img_final_adap_thres_col=sg.Frame('Adaptive Thresholding',[
     [sg.Text('Mean'),sg.Radio('ON','MEAN',key='img_final_mean_on_off',enable_events=True),sg.Radio('OFF','MEAN'),sg.Text('Block Size'),sg.Slider(range=(0,20),orientation='h',key='img_final_mean_block_size',enable_events=True),sg.Text('Constant'),sg.Slider(range=(0,20),orientation='h',key='img_final_mean_constant',enable_events=True)],
     [],
     [],
-    [sg.Text('Gaussian'),sg.Radio('ON','GAUSS',key='img_final_gaussian',visible=False)]
+    [sg.Text('Canny Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img_final_canny1',enable_events=True),sg.Slider(range=(0,255),orientation='h',key='img_final_canny2',enable_events=True)],
+    [sg.Text('Sobel Edge Detection'),sg.Slider(range=(0,255),orientation='h',key='img_final_sobel',enable_events=True)],
+    [sg.Text('dx :'),sg.Radio('ON','dx',key='img_final_sobel_dx',enable_events=True),sg.Radio('OFF','dx')],
+    [sg.Text('dy :'),sg.Radio('ON','dy',key='img_final_sobel_dy',enable_events=True),sg.Radio('OFF','dy')]
 ])
 img_final_thres_col = sg.Frame('Tresholding',[
     [sg.Text('Binary'),sg.Slider(range=(0,255),orientation='h',key='img_final_binary',enable_events=True,)],
@@ -154,13 +163,13 @@ img_final_thres_col = sg.Frame('Tresholding',[
 ])
 
 img_final_morph_col = sg.Frame('Morphological Transformation',[
-    [sg.Text('Erosion'),sg.Slider(range=(0,50),orientation='h',key='img_final_erosion',enable_events=True)],
-    [sg.Text('Dilation'),sg.Slider(range=(0,50),orientation='h',key='img_final_dilation',enable_events=True)],
-    [sg.Text('Opening'),sg.Slider(range=(0,50),orientation='h',key='img_final_opening',enable_events=True)],
-    [sg.Text('Closing'),sg.Slider(range=(0,50),orientation='h',key='img_final_closing',enable_events=True)],
-    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,50),orientation='h',key='img_final_gradiant',enable_events=True)],
-    [sg.Text('Top Hat'),sg.Slider(range=(0,50),orientation='h',key='img_final_tophat',enable_events=True)],
-    [sg.Text('Black Hat'),sg.Slider(range=(0,50),orientation='h',key='img_final_blackhat',enable_events=True)],
+    [sg.Text('Erosion'),sg.Slider(range=(0,255),orientation='h',key='img_final_erosion',enable_events=True)],
+    [sg.Text('Dilation'),sg.Slider(range=(0,255),orientation='h',key='img_final_dilation',enable_events=True)],
+    [sg.Text('Opening'),sg.Slider(range=(0,255),orientation='h',key='img_final_opening',enable_events=True)],
+    [sg.Text('Closing'),sg.Slider(range=(0,255),orientation='h',key='img_final_closing',enable_events=True)],
+    [sg.Text('Morphological Gradient'),sg.Slider(range=(0,255),orientation='h',key='img_final_gradiant',enable_events=True)],
+    [sg.Text('Top Hat'),sg.Slider(range=(0,255),orientation='h',key='img_final_tophat',enable_events=True)],
+    [sg.Text('Black Hat'),sg.Slider(range=(0,255),orientation='h',key='img_final_blackhat',enable_events=True)],
 ])
 
 
@@ -205,7 +214,7 @@ layout=[
 
 window = sg.Window('FolyoGör',layout,grab_anywhere=False,finalize=True)
 window.maximize()
-cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+cap = cv2.VideoCapture(1,cv2.CAP_DSHOW)
 feed = 'pic'
 final_state = 'o-f1'
 img_set = False
@@ -430,7 +439,12 @@ while True:
                 filtered_img_1 = cv2.morphologyEx(filtered_img_1,cv2.MORPH_BLACKHAT,kernel)
             if values['img1_mean_on_off'] is True:
                 filtered_img_1 = cv2.adaptiveThreshold(filtered_img_1,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img1_mean_block_size']),int(values['img1_mean_constant']))
-            
+            if values['img1_canny1'] != 0 and values['img1_canny2'] != 0:
+                filtered_img_1 = cv2.Canny(filtered_img_1,values['img1_canny1'],values['img1_canny2'])
+            if values['img1_sobel'] != 0 and (values['img1_sobel_dx'] or values['img1_sobel_dy']) and values['img1_sobel'] % 2 != 0 and values['img1_sobel']<31 :
+                filtered_img_1 = cv2.Sobel(filtered_img_1,ddepth=cv2.CV_64F ,dx = int(values['img1_sobel_dx']), dy = int(values['img1_sobel_dy']), ksize = int(values['img1_sobel']),scale=1,delta=0)
+                filtered_img_1 = cv2.convertScaleAbs(filtered_img_1)
+
             filtered_img1_imgbytes = cv2.imencode('.png', filtered_img_1)[1].tobytes() 
             window['filtered_img_1'].update(data = filtered_img1_imgbytes)
 
@@ -475,7 +489,11 @@ while True:
                 filtered_img_2 = cv2.morphologyEx(filtered_img_2,cv2.MORPH_BLACKHAT,kernel)
             if values['img2_mean_on_off'] is True:
                 filtered_img_2 = cv2.adaptiveThreshold(filtered_img_2,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img2_mean_block_size']),int(values['img2_mean_constant']))
-            
+            if values['img2_canny1'] != 0 and values['img2_canny2'] != 0:
+                filtered_img_2 = cv2.Canny(filtered_img_2,values['img2_canny1'],values['img2_canny2'])
+            if values['img2_sobel'] != 0 and (values['img2_sobel_dx'] or values['img2_sobel_dy']) and values['img2_sobel'] % 2 != 0 and values['img2_sobel']<31 :
+                filtered_img_2 = cv2.Sobel(filtered_img_2,ddepth=cv2.CV_8U ,dx = int(values['img2_sobel_dx']), dy = int(values['img2_sobel_dy']), ksize = int(values['img2_sobel']),scale=1,delta=0)
+
             filtered_img2_imgbytes = cv2.imencode('.png', filtered_img_2)[1].tobytes()  
             window['filtered_img_2'].update(data = filtered_img2_imgbytes)
 
@@ -541,7 +559,11 @@ while True:
                 final_image = cv2.morphologyEx(final_image,cv2.MORPH_BLACKHAT,kernel)
             if values['img_final_mean_on_off'] is True:
                 final_image = cv2.adaptiveThreshold(final_image,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img_final_mean_block_size']),int(values['img_final_mean_constant']))
-            
+            if values['img_final_canny1'] != 0 and values['img_final_canny2'] != 0:
+                final_image = cv2.Canny(final_image,values['img_final_canny1'],values['img_final_canny2'])
+            if values['img_final_sobel'] != 0 and (values['img_final_sobel_dx'] or values['img_final_sobel_dy']) and values['img_final_sobel'] % 2 != 0 and values['img_final_sobel']<31 :
+                final_image = cv2.Sobel(final_image,ddepth=cv2.CV_8U ,dx = int(values['img_final_sobel_dx']), dy = int(values['img_final_sobel_dy']), ksize = int(values['img_final_sobel']),scale=1,delta=0)
+
             final_img_imgbytes = cv2.imencode('.png', final_image)[1].tobytes()
             window['final_img'].update(data = final_img_imgbytes)
 
@@ -605,7 +627,10 @@ while True:
             filtered_vid_1 = cv2.morphologyEx(filtered_vid_1,cv2.MORPH_BLACKHAT,kernel)
         if values['img1_mean_on_off'] is True:
             filtered_vid_1 = cv2.adaptiveThreshold(filtered_vid_1,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img1_mean_block_size']),int(values['img1_mean_constant']))
-        
+        if values['img1_canny1'] != 0 and values['img1_canny2'] != 0:
+            filtered_vid_1 = cv2.Canny(filtered_vid_1,values['img1_canny1'],values['img1_canny2'])
+        if values['img1_sobel'] != 0 and (values['img1_sobel_dx'] or values['img1_sobel_dy']) and values['img1_sobel'] % 2 != 0 and values['img1_sobel']<31 :
+            filtered_vid_1 = cv2.Sobel(filtered_vid_1,ddepth=cv2.CV_8U ,dx = int(values['img1_sobel_dx']), dy = int(values['img1_sobel_dy']), ksize = int(values['img1_sobel']),scale=1,delta=0)
         filtered_vid_1_vidbytes = cv2.imencode('.png', filtered_vid_1)[1].tobytes() 
         window['filtered_vid_1'].update(data = filtered_vid_1_vidbytes)
 
@@ -650,7 +675,10 @@ while True:
             filtered_vid_2 = cv2.morphologyEx(filtered_vid_2,cv2.MORPH_BLACKHAT,kernel)
         if values['img2_mean_on_off'] is True:
             filtered_vid_2 = cv2.adaptiveThreshold(filtered_vid_2,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img2_mean_block_size']),int(values['img2_mean_constant']))
-        
+        if values['img2_canny1'] != 0 and values['img2_canny2'] != 0:
+            filtered_vid_2 = cv2.Canny(filtered_vid_2,values['img2_canny1'],values['img2_canny2'])
+        if values['img2_sobel'] != 0 and (values['img2_sobel_dx'] or values['img2_sobel_dy']) and values['img2_sobel'] % 2 != 0 and values['img2_sobel']<31 :
+            filtered_vid_2 = cv2.Sobel(filtered_vid_2,ddepth=cv2.CV_8U ,dx = int(values['img2_sobel_dx']), dy = int(values['img2_sobel_dy']), ksize = int(values['img2_sobel']),scale=1,delta=0)
         filtered_vid_2_vidbytes = cv2.imencode('.png', filtered_vid_2)[1].tobytes()  
         window['filtered_vid_2'].update(data = filtered_vid_2_vidbytes)
 
@@ -716,7 +744,10 @@ while True:
             final_vid = cv2.morphologyEx(final_vid,cv2.MORPH_BLACKHAT,kernel)
         if values['img_final_mean_on_off'] is True:
             final_vid = cv2.adaptiveThreshold(final_vid,255,cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY,int(values['img_final_mean_block_size']),int(values['img_final_mean_constant']))
-        
+        if values['img_final_canny1'] != 0 and values['img_final_canny2'] != 0:
+            final_vid = cv2.Canny(final_vid,values['img_final_canny1'],values['img_final_canny2'])
+        if values['img_final_sobel'] != 0 and (values['img_final_sobel_dx'] or values['img_final_sobel_dy']) and values['img_final_sobel'] % 2 != 0 and values['img_final_sobel']<31 :
+            final_vid = cv2.Sobel(final_vid,ddepth=cv2.CV_8U ,dx = int(values['img_final_sobel_dx']), dy = int(values['img_final_sobel_dy']), ksize = int(values['img_final_sobel']),scale=1,delta=0)
         final_vid_vidbytes = cv2.imencode('.png', final_vid)[1].tobytes()
         window['final_vid'].update(data = final_vid_vidbytes)
 
